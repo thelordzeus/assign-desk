@@ -1,7 +1,7 @@
 const TabNavigator = () => {
   return (
     <>
-      <section class="block fixed bottom-0 inset-x-0 z-50 shadow-lg text-white   bg-opacity-30 dark:bg-opacity-30 dark:text-gray-400 border-t-2 border-royal/20 lg:w-2/5  w-11/12 md:w-3/4 m-auto">
+      <section class="block sticky bottom-0 inset-x-0 z-50 shadow-lg text-white   bg-black dark:text-gray-400 border-t-2 border-royal/20 lg:w-2/5  w-11/12 md:w-3/4 m-auto">
         <div id="tabs" class="flex justify-between ">
           <a
             href="#"
