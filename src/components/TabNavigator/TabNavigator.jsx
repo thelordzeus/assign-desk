@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 const TabNavigator = () => {
   return (
     <>
       <section class="block sticky bottom-0 inset-x-0 z-50 shadow-lg text-white   bg-black dark:text-gray-400 border-t-2 border-royal/20 lg:w-2/5  w-11/12 md:w-3/4 m-auto">
         <div id="tabs" class="flex justify-between ">
-          <a
-            href="#"
-            class="w-full focus:text-royal hover:text-royal justify-center inline-block text-center pt-2 pb-1 transform transition duration-500 hover:scale-125"
+          <Link
+            to="/"
+            className="w-full focus:text-royal hover:text-royal justify-center inline-block text-center pt-2 pb-1 transform transition duration-500 hover:scale-125"
             activeClass="dark:text-gray-100 text-black"
           >
             <svg
@@ -23,10 +25,11 @@ const TabNavigator = () => {
               />
             </svg>
             <span class="tab block text-xs">Assignments</span>
-          </a>
-          <a
-            href="#"
-            class="w-full focus:text-royal hover:text-royal justify-center inline-block text-center pt-2 pb-1transform transition duration-500 hover:scale-125"
+          </Link>
+
+          <Link
+            to="/resources"
+            className="w-full focus:text-royal hover:text-royal justify-center inline-block text-center pt-2 pb-1transform transition duration-500 hover:scale-125"
             activeClass="dark:text-gray-100 text-black"
           >
             <svg
@@ -44,7 +47,7 @@ const TabNavigator = () => {
               />
             </svg>
             <span class="tab block text-xs">Resources</span>
-          </a>
+          </Link>
         </div>
       </section>
     </>

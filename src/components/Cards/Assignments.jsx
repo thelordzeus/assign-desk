@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Cards = () => {
+const Assignments = () => {
   const [assigns, setAssign] = useState([
     { title: "OOPS week 10", date: "23 december", link: "" },
     { title: "OOPS week 10", date: "23 december", link: "" },
@@ -43,4 +43,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default Assignments;
