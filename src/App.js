@@ -1,12 +1,12 @@
-
-import './App.css';
+import "./App.css";
+import Cards from "./components/Cards/Cards";
+import NavBar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="App bg-black h-screen ">
+      <NavBar />
+      <Cards />
     </div>
   );
 }
