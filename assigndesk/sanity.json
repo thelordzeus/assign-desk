@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "project": {
+    "name": "AssignDesk"
+  },
+  "api": {
+    "projectId": "81v9zhi7",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {},
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}
