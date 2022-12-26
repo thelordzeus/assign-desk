@@ -7,6 +7,8 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // We import object and document schemas
 import assignment from "./assignment";
 import resources from "./resources";
+import announs from "./announs";
+import blockContent from "./blockContent";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,5 +21,7 @@ export default createSchema({
     // in the studio.
     assignment,
     resources,
+    announs,
+    blockContent,
   ]),
 });
