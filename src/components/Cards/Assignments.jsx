@@ -16,6 +16,21 @@ const Assignments = () => {
       .catch(console.error);
   }, []);
 
+  if (assigns.length === 0) {
+    return (
+      <div class="m  mt-12 space-y-5">
+        <h1 className=" boujee-text text-2xl font-bold">
+          No Assignments. Party!
+        </h1>
+        <img
+          src="https://media.tenor.com/HaHE49a50HsAAAAC/teo-cat.gif"
+          alt=""
+          className="w-[300px] h-[300px] m-auto rounded-lg"
+        />
+      </div>
+    );
+  }
+  // #e1bc29
   return (
     <div className=" space-y-4 mt-4 pb-14">
       {assigns.map((assign) => (
@@ -25,10 +40,11 @@ const Assignments = () => {
               {assign.name}
             </h5>
           </a>
-          <p class="mb-3 font-normal text-[#F77171] ">{assign.date}</p>
+          <p class="mb-3 font-normal text-[#e1bc29] ">{assign.date}</p>
           <a
             href={assign.solution}
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            target="_blank"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer"
           >
             Solution
             <svg
