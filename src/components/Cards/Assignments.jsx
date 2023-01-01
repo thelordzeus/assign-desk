@@ -4,17 +4,19 @@ const Assignments = () => {
   const [assigns, setAssign] = useState([]);
 
   useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "assignment"]{
-      name,
-      date,
-      solution
-    }`
-      )
-      .then((data) => setAssign(data))
-      .catch(console.error);
+    const fetchItems = async () => {
+      //data = result
+      const data = await sanityClient.fetch(`*[_type == "assignment"]{
+        name,
+        date,
+        solution
+      }`);
+      setAssign(data);
+    };
+    fetchItems();
   }, []);
+
+  
 
   if (assigns.length === 0) {
     return (
@@ -34,7 +36,7 @@ const Assignments = () => {
   return (
     <div className=" space-y-4 mt-4 pb-14">
       {assigns.map((assign) => (
-        <div class="lg:w-2/5  w-11/12 md:w-3/4 m-auto  p-6 rounded-lg shadow-md bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <div className="lg:w-2/5  w-11/12 md:w-3/4 m-auto  p-6 rounded-lg shadow-md bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
           <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {assign.name}
