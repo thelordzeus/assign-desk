@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import sanityClient from "../../client.js";
+import mySound from "../Cards/gipsy.mp3";
+
 const Assignments = () => {
   const [assigns, setAssign] = useState([]);
 
@@ -16,7 +18,9 @@ const Assignments = () => {
     fetchItems();
   }, []);
 
-  
+  function play() {
+    new Audio(mySound).play();
+  }
 
   if (assigns.length === 0) {
     return (
@@ -29,6 +33,13 @@ const Assignments = () => {
           alt=""
           className="w-[300px] h-[300px] m-auto rounded-lg"
         />
+        <button
+          type="button"
+          onClick={play}
+          class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        >
+          Vibe Check.
+        </button>
       </div>
     );
   }

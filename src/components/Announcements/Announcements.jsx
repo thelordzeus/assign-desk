@@ -17,6 +17,20 @@ const Announcements = () => {
       .catch(console.error);
   }, []);
 
+  if (posts.length === 0) {
+    return (
+      <div class="m  mt-12 space-y-5">
+        <h1 className=" boujee-text text-2xl font-bold">
+          No Announcements. Party!
+        </h1>
+        <img
+          src="https://media.tenor.com/HaHE49a50HsAAAAC/teo-cat.gif"
+          alt=""
+          className="w-[300px] h-[300px] m-auto rounded-lg"
+        />
+      </div>
+    );
+  }
   return (
     <div className=" space-y-4 mt-4 pb-14">
       {posts.map((post) => (
