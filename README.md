@@ -20,5 +20,5 @@ Overall, AssignDesk is a comprehensive and user-friendly app that helps students
 
 ## Product Demo
 
-<img src="../mobile.gif" alt="ProductDemo" width="60%" height="auto" />
+![](https://github.com/thelordzeus/assign-desk/blob/main/mobile.gif)
 
